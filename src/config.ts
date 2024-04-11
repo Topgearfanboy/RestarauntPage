@@ -1,6 +1,7 @@
 import { Settings } from "./types";
 
 export const config = {
+  Theme: { Primary: "#22aeff" },
   General: {
     Name: "Moes Chicken",
     Address: "",

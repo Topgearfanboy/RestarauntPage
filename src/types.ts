@@ -1,4 +1,5 @@
 export interface Settings {
+  Theme: { Primary: String };
   General: {
     Name: String;
     PhoneNumber: String;
