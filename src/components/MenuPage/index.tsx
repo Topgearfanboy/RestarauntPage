@@ -3,7 +3,6 @@ import React from "react";
 import House from "./house.svg";
 import { NavBar } from "../navBar";
 import { useSettings } from "../../hooks/settings-hook";
-import { Schedule } from "../Hours";
 // import Background from "./background.jpg";
 
 interface InitalState {
@@ -11,7 +10,7 @@ interface InitalState {
   //   setReport: Function;
 }
 
-export const HomePage: React.FC<InitalState> = () => {
+export function MenuPage(props: InitalState): JSX.Element {
   const Settings = useSettings();
   return (
     <div className=" h-screen bg-hero bg-no-repeat bg-cover bg-center bg-fixed bg-[url('../components/HomePage/background.jpg')] bg-opacity-25">
@@ -22,19 +21,23 @@ export const HomePage: React.FC<InitalState> = () => {
             <Typography
               variant="h1"
               sx={{ fontWeight: "medium" }}
-              color="#22aeff"
+              color={Settings?.Theme.Primary as string}
               className="min-w-max"
             >
               {Settings?.General.Name}
             </Typography>
 
-            <Typography variant="h5" color="#22aeff" className="pb-10">
+            <Typography
+              variant="h5"
+              color={Settings?.Theme.Primary as string}
+              className="pb-10"
+            >
               {Settings?.General.TagLine}
             </Typography>
             <a href="/menu">
               <button
                 type="button"
-                className="ml-36 text-white bg-Theme hover:bg-ThemeDark focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none max-w-max"
+                className="text-white bg-Theme hover:bg-ThemeDark focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none max-w-max"
               >
                 {Settings?.Words.Menu}
               </button>
@@ -46,4 +49,4 @@ export const HomePage: React.FC<InitalState> = () => {
       </div>
     </div>
   );
-};
+}

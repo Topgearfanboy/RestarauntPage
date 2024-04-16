@@ -3,40 +3,55 @@ import { Settings } from "./types";
 export const config = {
   Theme: { Primary: "#22aeff" },
   General: {
-    Name: "Moes Chicken",
-    Address: "",
+    Name: "Moe's Chicken",
+    Address: "123 Main St New York New York",
     PhoneNumber: "",
     TagLine: "Good Eats!",
   },
-  Dishes: [],
-  Hours: {
-    Sunday: {
-      Opening: { Hour: 9, minutes: 0 },
-      Closing: { Hour: 17, minutes: 0 },
-    },
-    Monday: {
-      Opening: { Hour: 9, minutes: 0 },
-      Closing: { Hour: 17, minutes: 0 },
-    },
-    Tuesday: {
-      Opening: { Hour: 9, minutes: 0 },
-      Closing: { Hour: 17, minutes: 0 },
-    },
-    Wednesday: {
-      Opening: { Hour: 9, minutes: 0 },
-      Closing: { Hour: 17, minutes: 0 },
-    },
-    Thursday: {
-      Opening: { Hour: 9, minutes: 0 },
-      Closing: { Hour: 17, minutes: 0 },
-    },
-    Friday: {
-      Opening: { Hour: 9, minutes: 0 },
-      Closing: { Hour: 17, minutes: 0 },
-    },
-    Saturday: {
-      Opening: { Hour: 9, minutes: 0 },
-      Closing: { Hour: 17, minutes: 0 },
-    },
+  Words: {
+    Menu: "Menu",
+    Address: "Address",
+    SocialMedia: "Social Media",
+    Instagram: "Social Media",
+    X: "X",
+    Facebook: "Facebook",
   },
+  Dishes: [],
+  Hours: [
+    {
+      Day: "Sunday",
+      Opening: { Hour: 9, minutes: 0 },
+      Closing: { Hour: 17, minutes: 0 },
+    },
+    {
+      Day: "Monday",
+      Opening: { Hour: 9, minutes: 0 },
+      Closing: { Hour: 17, minutes: 0 },
+    },
+    {
+      Day: "Tuesday",
+      Opening: { Hour: 9, minutes: 0 },
+      Closing: { Hour: 17, minutes: 0 },
+    },
+    {
+      Day: "Wednesday",
+      Opening: { Hour: 9, minutes: 0 },
+      Closing: { Hour: 17, minutes: 0 },
+    },
+    {
+      Day: "Thursday",
+      Opening: { Hour: 9, minutes: 0 },
+      Closing: { Hour: 17, minutes: 0 },
+    },
+    {
+      Day: "Friday",
+      Opening: { Hour: 9, minutes: 0 },
+      Closing: { Hour: 17, minutes: 0 },
+    },
+    {
+      Day: "Saturday",
+      Opening: { Hour: 9, minutes: 0 },
+      Closing: { Hour: 17, minutes: 0 },
+    },
+  ],
 } as Settings;

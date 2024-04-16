@@ -1,6 +1,9 @@
 import React from "react";
 import Logo from "./fullLogo.png";
+import { useSettings } from "../../hooks/settings-hook";
 export function NavBar(): JSX.Element {
+  const Settings = useSettings();
+
   return (
     <nav
       className="sticky top-0 bg-Theme border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 z-30 bg-opacity-90 backdrop-blur "
@@ -10,7 +13,7 @@ export function NavBar(): JSX.Element {
         <a href="/" className="flex items-center">
           <img src={Logo} className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
           <span className="self-center text-xl text-white font-semibold whitespace-nowrap dark:text-white">
-            Investor Calculator
+            {Settings?.General.Name}
           </span>
         </a>
         <button
@@ -39,37 +42,13 @@ export function NavBar(): JSX.Element {
           <ul className="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
             <li>
               <a
-                href="/PropertiesPage"
+                href="/menu"
                 className="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-100 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
               >
-                Your Properties
+                {Settings?.Words.Menu}
               </a>
             </li>
-            {/* <li>
-              <a
-                href="/FAQ"
-                className="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                FAQ
-              </a>
-            </li>
-            <li>
-              <a
-                href="/services"
-                className="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contact
-              </a>
-            </li> */}
           </ul>
         </div>
       </div>
