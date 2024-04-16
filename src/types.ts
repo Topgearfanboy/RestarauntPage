@@ -1,21 +1,22 @@
 export interface Settings {
-  Theme: { Primary: String };
+  Theme: { Primary: string };
   General: {
-    Name: String;
-    PhoneNumber: String;
-    Address: String;
-    TagLine: String;
-    SocialMedia?: { Instagram?: String; X?: String; Facebook?: String };
+    Name: string;
+    PhoneNumber: string;
+    Address: string;
+    TagLine: string;
+    SocialMedia?: { Instagram?: string; X?: string; Facebook?: string };
   };
   Words: {
-    Menu: String;
-    Address: String;
-    SocialMedia: String;
-    Instagram: String;
-    X: String;
-    Facebook: String;
+    Menu: string;
+    Hours: string;
+    Address: string;
+    SocialMedia: string;
+    Instagram: string;
+    X: string;
+    Facebook: string;
   };
-  Dishes: { Name: String; Description: String; Price: String }[];
+  Dishes: { Name: string; Description: string; Price: string }[];
   Hours: Hours[];
 }
 

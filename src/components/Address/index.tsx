@@ -6,7 +6,7 @@ export const Address: React.FC = () => {
 
   return (
     <div className="flex flex-col">
-      <p>{settings?.Words.Address}</p>
+      <p className="text-xl pb-4">{settings?.Words.Address}</p>
       <address>{settings?.General.Address}</address>
     </div>
   );

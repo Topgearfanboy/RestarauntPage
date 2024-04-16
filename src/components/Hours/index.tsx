@@ -17,5 +17,10 @@ export const Schedule: React.FC = () => {
       </>
     );
   });
-  return <div className="grid grid-cols-2 max-w-fit">{days}</div>;
+  return (
+    <div className="flex flex-col">
+      <p className="text-xl pb-4">{settings?.Words.Hours}</p>
+      <div className="grid grid-cols-2 max-w-fit">{days}</div>
+    </div>
+  );
 };

@@ -1,13 +1,13 @@
-# cra-template-tailwindcss-typescript
+# Real Estate Calculator Project
 
-A streamlined [Tailwind CSS v3.1](https://tailwindcss.com) template for [Create React App](https://github.com/facebook/create-react-app) in [TypeScript](https://www.typescriptlang.org/).
-
-> This template installs and sets up [Tailwind CSS](https://tailwindcss.com) with TypeScript support.
+Configurable Restraunt Website <br />
+Hosted online at: https://restaraunt-page.vercel.app/
 
 ## Usage
 
 ```bash
-npx create-react-app --template tailwindcss-typescript
+npm install
+npm start
 ```
 
 ## Credits
