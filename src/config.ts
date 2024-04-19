@@ -5,7 +5,7 @@ export const config = {
   General: {
     Name: "Moe's Chicken",
     Address: "123 Main St New York New York",
-    PhoneNumber: "(804) 998-0476",
+    PhoneNumber: "(924) 442-3498",
     TagLine: "Good Eats!",
   },
   Links: { Instagram: "insta", X: "X", Facebook: "Facebook", Takeout: "Test", Reservations: "Mason" },

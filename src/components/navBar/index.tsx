@@ -39,7 +39,7 @@ export function NavBar(): JSX.Element {
           )}
           {Settings?.General.PhoneNumber && (
             <li>
-              <a href={Settings?.Links.Reservations} aria-current="page">
+              <a href={Settings?.General.PhoneNumber} aria-current="page">
                 {Settings?.General.PhoneNumber}
               </a>
             </li>
