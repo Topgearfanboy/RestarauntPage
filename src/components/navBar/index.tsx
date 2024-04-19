@@ -37,6 +37,13 @@ export function NavBar(): JSX.Element {
               </a>
             </li>
           )}
+          {Settings?.General.PhoneNumber && (
+            <li>
+              <a href={Settings?.Links.Reservations} aria-current="page">
+                {Settings?.General.PhoneNumber}
+              </a>
+            </li>
+          )}
         </ul>
       </div>
     </nav>
