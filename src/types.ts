@@ -5,10 +5,18 @@ export interface Settings {
     PhoneNumber: string;
     Address: string;
     TagLine: string;
-    SocialMedia?: { Instagram?: string; X?: string; Facebook?: string };
+  };
+  Links: {
+    Reservations?: string;
+    Takeout?: string;
+    Instagram?: string;
+    X?: string;
+    Facebook?: string;
   };
   Words: {
     Menu: string;
+    Reservations: string;
+    Takeout: string;
     Hours: string;
     Address: string;
     SocialMedia: string;
@@ -16,7 +24,7 @@ export interface Settings {
     X: string;
     Facebook: string;
   };
-  Dishes: { Name: string; Description: string; Price: string }[];
+  Menu: Section[];
   Hours: Hours[];
 }
 
@@ -24,4 +32,14 @@ export interface Hours {
   Day: string;
   Opening: { Hour: number; minutes: number };
   Closing: { Hour: number; minutes: number };
+}
+
+export interface Section {
+  Name: String;
+  Dishes: Dish[];
+}
+export interface Dish {
+  Price: number;
+  Name: string;
+  Description?: string;
 }
