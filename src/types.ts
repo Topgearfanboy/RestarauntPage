@@ -1,5 +1,5 @@
 export interface Settings {
-  Theme: { Primary: string };
+  Theme: { Primary: string; Secondary: string };
   General: {
     Name: string;
     PhoneNumber: string;

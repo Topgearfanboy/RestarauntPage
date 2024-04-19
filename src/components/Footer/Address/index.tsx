@@ -1,5 +1,5 @@
 import React from "react";
-import { useSettings } from "../../hooks/settings-hook";
+import { useSettings } from "../../../hooks/settings-hook";
 
 export const Address: React.FC = () => {
   const settings = useSettings();

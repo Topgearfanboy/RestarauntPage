@@ -1,6 +1,6 @@
 import React from "react";
 import { formatTime } from "./helpers";
-import { useSettings } from "../../hooks/settings-hook";
+import { useSettings } from "../../../hooks/settings-hook";
 
 export const Schedule: React.FC = () => {
   const settings = useSettings();

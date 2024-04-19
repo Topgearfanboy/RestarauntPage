@@ -3,7 +3,8 @@ import React from "react";
 import House from "./house.svg";
 import { NavBar } from "../navBar";
 import { useSettings } from "../../hooks/settings-hook";
-import { Schedule } from "../Hours";
+import { Schedule } from "../Footer/Hours";
+import { Footer } from "../Footer";
 // import Background from "./background.jpg";
 
 interface InitalState {
@@ -41,9 +42,9 @@ export const HomePage: React.FC<InitalState> = () => {
             </a>
           </div>
         </div>
-
         <img src={House} alt="React Logo" className="w-1/4" />
       </div>
+      <Footer />
     </div>
   );
 };

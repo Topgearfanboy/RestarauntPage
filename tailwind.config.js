@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
       'Theme': config.Theme.Primary,
+      'Secondary': config.Theme.Secondary,
       'ThemeDark': '#0053B5',
       'ThemeLight':'#EEFBFF',
       'ThemeMedium': '#6C94BC',
