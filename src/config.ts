@@ -1,7 +1,7 @@
 import { Settings } from "./types";
 
-export const config = {
-  Theme: { Primary: "#22aeff", Secondary: "#FFFFFF" },
+export const config: Settings = {
+  Theme: { Primary: "#30332E", Secondary: "#62BBC1", Tertiary: "EC058E" },
   General: {
     Name: "Moe's Chicken",
     Address: "123 Main St New York New York",
@@ -9,6 +9,7 @@ export const config = {
     TagLine: "Good Eats!",
   },
   Links: { Instagram: "insta", X: "X", Facebook: "Facebook", Takeout: "Test" },
+  Images: { MainPage: "MainPage.jpg" },
   Words: {
     Menu: "Menu",
     Reservations: "Reservations",
@@ -137,4 +138,4 @@ export const config = {
       Closing: { Hour: 17, minutes: 0 },
     },
   ],
-} as Settings;
+};

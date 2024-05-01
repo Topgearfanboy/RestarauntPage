@@ -3,34 +3,36 @@ import React from "react";
 import House from "./house.svg";
 import { NavBar } from "../navBar";
 import { useSettings } from "../../hooks/settings-hook";
-import { Schedule } from "../Footer/Hours";
 import { Footer } from "../Footer";
-// import Background from "./background.jpg";
 
-interface InitalState {
-  //   report: Report;
-  //   setReport: Function;
-}
-
-export const HomePage: React.FC<InitalState> = () => {
+export const HomePage: React.FC = () => {
   const Settings = useSettings();
   return (
     <>
-      <div className=" h-screen bg-hero bg-no-repeat bg-cover bg-center bg-fixed bg-[url('../components/HomePage/background.jpg')] bg-opacity-25">
+      <div
+        className={`h-screen bg-hero bg-no-repeat bg-cover bg-center bg-fixed bg-opacity-25`}
+        style={{
+          backgroundImage: `url('/images/${Settings?.Images.MainPage}')`,
+        }}
+      >
         <NavBar />
-        <div className=" mt-20 flex justify-center flex-col md:flex-row ">
+        <div className=" mt-20 flex justify-start flex-col md:flex-row ml-64 max-w-fit p-12">
           <div className=" max-w-min flex flex-row ">
-            <div className="flex flex-col mr-10">
+            <div className="flex flex-col">
               <Typography
                 variant="h1"
-                sx={{ fontWeight: "medium" }}
-                color="#22aeff"
+                sx={{ fontWeight: "bold" }}
+                color={Settings?.Theme.Primary}
                 className="min-w-max"
               >
                 {Settings?.General.Name}
               </Typography>
 
-              <Typography variant="h5" color="#22aeff" className="pb-10">
+              <Typography
+                variant="h5"
+                color={Settings?.Theme.Primary}
+                className="pb-10"
+              >
                 {Settings?.General.TagLine}
               </Typography>
               <a href="/menu">
@@ -43,7 +45,6 @@ export const HomePage: React.FC<InitalState> = () => {
               </a>
             </div>
           </div>
-          <img src={House} alt="React Logo" className="w-1/4" />
         </div>
       </div>
       <Footer />

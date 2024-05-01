@@ -7,8 +7,8 @@ export const Schedule: React.FC = () => {
   let days = settings?.Hours?.map((day) => {
     return (
       <>
-        <p className="text-center">{`${day.Day}`}</p>
-        <p>
+        <p className="text-center" key={day.Day}>{`${day.Day}`}</p>
+        <p key={day.Day + "Time"}>
           {`${formatTime(day.Opening.Hour, day.Opening.minutes)} - ${formatTime(
             day.Closing.Hour,
             day.Closing.minutes

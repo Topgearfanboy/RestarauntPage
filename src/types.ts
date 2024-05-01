@@ -1,5 +1,5 @@
 export interface Settings {
-  Theme: { Primary: string; Secondary: string };
+  Theme: { Primary: string; Secondary: string; Tertiary: string };
   General: {
     Name: string;
     PhoneNumber: string;
@@ -13,6 +13,7 @@ export interface Settings {
     X?: string;
     Facebook?: string;
   };
+  Images: { MainPage: string };
   Words: {
     Menu: string;
     Reservations: string;
@@ -35,7 +36,7 @@ export interface Hours {
 }
 
 export interface Section {
-  Name: String;
+  Name: string;
   Dishes: Dish[];
 }
 export interface Dish {

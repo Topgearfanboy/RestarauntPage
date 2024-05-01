@@ -7,6 +7,7 @@ module.exports = {
       colors: {
       'Theme': config.Theme.Primary,
       'Secondary': config.Theme.Secondary,
+      'Tertiary': config.Theme.Tertiary,
       'ThemeDark': '#0053B5',
       'ThemeLight':'#EEFBFF',
       'ThemeMedium': '#6C94BC',
