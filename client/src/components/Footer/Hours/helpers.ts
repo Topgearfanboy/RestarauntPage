@@ -1,5 +1,3 @@
-import { Hours } from "../../../types";
-
 export const formatTime = (hours: number, minutes: number) => {
   return `${hours % 12}:${minutes.toLocaleString("en-US", {
     minimumIntegerDigits: 2,

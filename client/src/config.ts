@@ -20,6 +20,7 @@ export const config: Settings = {
     Instagram: "Instagram",
     X: "X",
     Facebook: "Facebook",
+    LogOut: "Log Out",
   },
   Menu: [
     {

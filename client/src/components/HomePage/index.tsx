@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import House from "./house.svg";
 import { NavBar } from "../navBar";
 import { useSettings } from "../../hooks/settings-hook";
 import { Footer } from "../Footer";

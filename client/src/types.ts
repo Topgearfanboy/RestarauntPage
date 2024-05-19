@@ -24,6 +24,7 @@ export interface Settings {
     Instagram: string;
     X: string;
     Facebook: string;
+    LogOut: string;
   };
   Menu: Section[];
   Hours: Hours[];
@@ -39,6 +40,7 @@ export interface Section {
   Name: string;
   Dishes: Dish[];
 }
+
 export interface Dish {
   Price: number;
   Name: string;

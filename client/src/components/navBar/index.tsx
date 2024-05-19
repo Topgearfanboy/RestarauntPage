@@ -1,8 +1,16 @@
 import React from "react";
 import Logo from "./fullLogo.png";
 import { useSettings } from "../../hooks/settings-hook";
+import { checkLogin, logout } from "../../api";
 export function NavBar(): JSX.Element {
   const Settings = useSettings();
+  const [loggedIn, setLoggedIn] = React.useState<boolean>(false);
+  React.useEffect(() => {
+    const getStatus = async () => {
+      setLoggedIn((await checkLogin()).login);
+    };
+    getStatus();
+  }, [loggedIn]);
 
   return (
     <nav
@@ -42,6 +50,15 @@ export function NavBar(): JSX.Element {
               <a href={Settings?.General.PhoneNumber} aria-current="page">
                 {Settings?.General.PhoneNumber}
               </a>
+            </li>
+          )}
+          {loggedIn && (
+            <li
+              onClick={async () => {
+                setLoggedIn(!(await logout()).login);
+              }}
+            >
+              {Settings?.Words.LogOut}
             </li>
           )}
         </ul>
