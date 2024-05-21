@@ -3,12 +3,14 @@ import  cors from "cors";
 import  bcrypt from 'bcrypt';
 import  bodyParser from "body-parser";
 import cookieparser from "cookie-parser"
-import  session from "express-session";
+import session from "express-session";
+// import ('.env').config();
+
 const saltRounds = 10;
-import { username, password } from './secrets.js';
 
 import { MongoClient, ServerApiVersion } from 'mongodb';
-const uri = `mongodb+srv://${username}:${password}@cluster0.ltymbqk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+console.log(process.env.USERNAME)
+const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.ltymbqk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -19,6 +21,7 @@ const client = new MongoClient(uri, {
 });
 
 const PORT=process.env.PORT || 8000;
+
 
 const app=express();
 
